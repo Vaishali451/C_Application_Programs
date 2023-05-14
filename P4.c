@@ -1,28 +1,27 @@
-//program which accepts N from user and print all odd numbers up to N
-
+// program which accept number from user and display its table
 #include<stdio.h>
 
-void OddDisplay( int iNo)
+void Table(int iNo)
 {
-   int iCnt=0;
-   for(iCnt=1;iCnt<=iNo;iCnt++)
+   int iCnt =0;
+   if(iNo < 0)     // Updator
    {
-    if(iCnt%2 !=0)
-    {
-    printf("%d ",iCnt);
-    }
+        iNo = -iNo;
    }
-
+   for ( iCnt =1 ; iCnt<= 10 ; iCnt++)
+   {
+     printf("%d \t" , iNo*iCnt);
+   }
 }
 
 int main()
 {
   int iValue=0;
-  
+ 
   printf("Enter number");
   scanf("%d",&iValue);
 
-  OddDisplay(iValue);
+  Table(iValue);
 
   return 0;
 }

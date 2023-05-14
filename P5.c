@@ -1,26 +1,28 @@
-//program which accepts N from user and print first 5 multiples of N
+// program which accept number from user and display its table in reverse order
+
 #include<stdio.h>
 
-void MultipleDisplay( int iNo)
+void TableRev(int iNo)
 {
-   int iCnt=0;
-   for(iCnt=1;iCnt<=5;iCnt++)
+   int iCnt =0;
+   if(iNo < 0)     // Updator
    {
-    
-    printf("%d ",iCnt*iNo);
-    
+        iNo = -iNo;
    }
-
+   for ( iCnt =10 ; iCnt>= 1 ; iCnt--)
+   {
+     printf("%d \t" , iNo*iCnt);
+   }
 }
 
 int main()
 {
   int iValue=0;
-  
+ 
   printf("Enter number");
   scanf("%d",&iValue);
 
-  MultipleDisplay(iValue);
+  TableRev(iValue);
 
   return 0;
 }

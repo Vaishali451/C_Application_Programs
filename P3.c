@@ -1,40 +1,29 @@
+// program to find factorial of given number
 #include<stdio.h>
-typedef int BOOL ;
 
-# define TRUE 1
-# define FALSE 0
-
-BOOL ChkEqual(int iNo1 , int iNo2)
+int Factorial(int iNo)
 {
-  if (iNo1 = iNo2)
+  int iCnt=0;
+  int ifact=1 ;
+  
+  for(iCnt=1 ; iCnt <= iNo ; iCnt ++)
   {
-    return TRUE;
+    ifact=ifact*iCnt;
   }
-  else
-  {
-    return FALSE;
-  }
- 
+   return ifact;
 }
+
 int main()
 {
-  int iValue1=0 , iValue2 =0;
+    int iValue=0; 
+    int iRet=0;
 
-  BOOL bRet = FALSE;
+    printf("Enter number");
+    scanf("%d",& iValue);
 
-  printf("Please Enter number");
-  scanf("%d %d",&iValue1 , &iValue2);
+    iRet = Factorial(iValue);
 
-  bRet=ChkEqual(iValue1 , iValue2);
+    printf("Factorial of number is %d",iRet);
 
-  if(iValue1 == iValue2)
-  {
-    printf("Equal");
-  }
-  else
-  {
-    printf("Not Equal");
-  }
-
-  return 0;
+    return 0;
 }

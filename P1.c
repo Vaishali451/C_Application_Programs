@@ -1,17 +1,21 @@
-//program which accept number from user and print that number of $ & *
+//Program Accept number from user and if number is less than 50 then print small.
+//if it is greater than 50 and less than 100 then print medium,if it is 
+// greater than 100 then print large
 #include<stdio.h>
 
-void Pattern(int iNo)
+void Number(int iNo)
 {
-  int iCnt=0;
-
-  if(iNo<0)
+  if(iNo<= 50)
   {
-    iNo=- iNo;
+    printf("small");
   }
-  for(iCnt=1;iCnt<=iNo;iCnt++)
+  if(100>iNo && iNo>=50)
   {
-    printf(" $ * ");
+    printf("medium");
+  }
+  if(100<iNo)
+  {
+    printf("Large");
   }
 }
 int main()
@@ -21,6 +25,7 @@ int main()
   printf("Enter number");
   scanf("%d",& iValue);
 
-  Pattern(iValue);
+  Number(iValue);
+
   return 0;
 }
