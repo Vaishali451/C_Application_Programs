@@ -1,26 +1,21 @@
 #include<stdio.h>
 
-int Divide( int iNo1, int iNo2)
+void Display(int iNo)
 {
-    int iAns=0;
+  int iCnt=0;
 
-    if(iNo2 == 0)
-    {
-        return-1;
-    }
-    iAns=iNo1/iNo2;
-
-    return iAns;
+  for(iCnt=1;iCnt<=iNo;iCnt++)
+  {
+    printf("*");
+  }
 }
-
 int main()
 {
-    int iValue1=15, iValue2=5;
-    int iRet=0;
+  int iValue=0;
 
-    iRet= Divide(iValue1,iValue2);
+  printf("Enter number");
+  scanf("%d",& iValue);
 
-    printf("Division is %d",iRet);
-
-    return 0;
+  Display(iValue);
+  return 0;
 }

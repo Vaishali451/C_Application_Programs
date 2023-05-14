@@ -1,38 +1,28 @@
 #include<stdio.h>
 
-typedef int BOOL;
-# define TRUE 1
-# define FALSE 0
-
-int Check( int iNo)
+void Display( int iNo,int iFrequency)
 {
-  if((iNo % 5)== 0)
+   iNo=0;
+ 
+  for(iNo= 0 ; iFrequency > iNo; iNo++)
   {
-    return TRUE;
-  }
-  else
-  {
-    return FALSE;
+    printf("%d", iNo);
+    
   }
 }
+
 int main()
 {
-  int iValue = 0;
-  BOOL bRet = FALSE;
+  int iValue=0;
+  int iCount=0;
 
-  printf("Enter Number");
-  scanf("%d", & iValue);
+  printf("Enter number");
+  scanf("%d",&iValue);
 
-  bRet = Check(iValue);
+  printf("Enter frequency");
+  scanf("%d",&iCount);
 
-  if(bRet==TRUE)
-  {
-    printf("Divide by 5");
-  }
-  else
-  {
-    printf("Not Divisible by 5");
-  }
-  
+  Display(iValue,iCount);
+
   return 0;
 }
