@@ -1,26 +1,40 @@
-// program which accept number from user and display all its non factors
 #include<stdio.h>
+typedef int BOOL ;
 
-void NonFact(int iNo)
+# define TRUE 1
+# define FALSE 0
+
+BOOL ChkEqual(int iNo1 , int iNo2)
 {
-  int iCnt = 0;
-  for(iCnt = 1; iCnt <= iNo ; iCnt++)      
-    {
-        if((iNo % iCnt) != 0)
-        {
-            printf("%d \t",iCnt);
-        }
-    }
-    
+  if (iNo1 = iNo2)
+  {
+    return TRUE;
+  }
+  else
+  {
+    return FALSE;
+  }
+ 
 }
 int main()
 {
-    int iValue=0;
+  int iValue1=0 , iValue2 =0;
 
-    printf("Enter number");
-    scanf("%d",& iValue);
+  BOOL bRet = FALSE;
 
-   NonFact(iValue);
+  printf("Please Enter number");
+  scanf("%d %d",&iValue1 , &iValue2);
 
-    return 0;
+  bRet=ChkEqual(iValue1 , iValue2);
+
+  if(iValue1 == iValue2)
+  {
+    printf("Equal");
+  }
+  else
+  {
+    printf("Not Equal");
+  }
+
+  return 0;
 }

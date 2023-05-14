@@ -1,30 +1,41 @@
-// program which accept number from user and display its factors in decreasing order
-
+// program which accept one number from user and check wheather that number greater than 100 or not 
 #include<stdio.h>
+typedef int BOOL ;
 
+# define TRUE 1
+# define FALSE 0
 
-void FactRev(int iNo)
+BOOL ChkGreater(int iNo)
 {
- 
-    int iCnt = 0;
-
-    for(iCnt = iNo; iCnt >=1 ; iCnt--)       // O(N/2)
-    {
-        if((iNo % iCnt) == 0)
-        {
-            printf("%d\n",iCnt);
-        }
-    }
-    
+  if (iNo> 100)
+  {
+    return TRUE;
+  }
+  else
+  {
+    return FALSE;
+  }
  
 }
 int main()
 {
   int iValue=0;
 
-  printf("Enter number");
+  BOOL bRet = FALSE;
+
+  printf("Please Enter number");
   scanf("%d",& iValue);
 
-  FactRev (iValue);
+  bRet=ChkGreater(iValue);
+
+  if(iValue> 100)
+  {
+    printf("Greater");
+  }
+  else
+  {
+    printf("Smaller");
+  }
+
   return 0;
 }

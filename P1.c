@@ -1,21 +1,15 @@
+//program which accept name from user and print that name
 #include<stdio.h>
 
-void Display(int iNo)
-{
-  int iCnt=0;
 
-  for(iCnt=1;iCnt<=iNo;iCnt++)
-  {
-    printf("*");
-  }
-}
 int main()
 {
-  int iValue=0;
+  char Name[30];
 
-  printf("Enter number");
-  scanf("%d",& iValue);
+  printf("Please enter full name");
+  scanf("%s",& Name);
 
-  Display(iValue);
+  printf("Your name is %s",Name);
+  
   return 0;
 }

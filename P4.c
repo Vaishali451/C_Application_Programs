@@ -1,32 +1,29 @@
-// program which accept number from user and return summation of all its non factors
+// program which accept three numbers and print its Multiplication
 #include<stdio.h>
 
-
-int SumNonFact(int iNo)
+int Multiply(int iNo1 , int iNo2, int iNo3)
 {
- int iCnt = 0;
- int iSum = 0;
-  for(iCnt = 1; iCnt <= iNo ; iCnt++)      
-    {
-        if((iNo % iCnt) != 0)
-        {
-          iSum = iSum + iCnt;
-        }
-    }
- return iSum;
-}
+  int iMult= 0;
 
+  if ((iNo1 , iNo2 ,iNo3 )== 0)
+  {
+    return 0;
+  }
+  
+  iMult = iNo1*iNo2*iNo3;
+  return iMult;
+}
 int main()
 {
-    int iValue=0;
-    int iRet = 0;
+  int iValue1=0 , iValue2 =0 , iValue3 =0 ,bRet =0 ; 
 
-    printf("Enter number");
-    scanf("%d",& iValue);
+  printf("Please Enter three number\n");
+  scanf("%d %d %d ",&iValue1 , &iValue2 , &iValue3);
 
-    iRet = SumNonFact(iValue);
-    
-    printf("%d",iRet);
+  bRet=Multiply(iValue1 , iValue2 ,iValue3);
 
-    return 0;
+  printf("three number Multiplication %d ",bRet);
+  
+  return 0;
 }
+
