@@ -1,45 +1,26 @@
-// program which accept number from user and return difference between
-// summation of all its factors and non factors
+//program which accepts N from user and print first 5 multiples of N
 #include<stdio.h>
 
-int FactDiff(int iNo)
+void MultipleDisplay( int iNo)
 {
-  int iCnt =0;
-  int iSum = 0;
-  int NiSum=0;
-  int FiSum=0;
-
-  for(iCnt = 1; iCnt <= iNo ; iCnt++)      
-    {
-        if((iNo % iCnt) != 0)
-        {
-          NiSum = NiSum + iCnt;
-        }
-    }
-
-  for(iCnt = 1; iCnt <= iNo ; iCnt++)      
-    {
-        if((iNo % iCnt) == 0)
-        {
-          FiSum = FiSum + iCnt;
-        }
-    }
+   int iCnt=0;
+   for(iCnt=1;iCnt<=5;iCnt++)
+   {
     
-    iSum = NiSum-FiSum;
- 
- return iSum;
+    printf("%d ",iCnt*iNo);
+    
+   }
+
 }
+
 int main()
 {
-    int iValue=0;
-    int iRet = 0;
+  int iValue=0;
+  
+  printf("Enter number");
+  scanf("%d",&iValue);
 
-    printf("Enter number");
-    scanf("%d",& iValue);
+  MultipleDisplay(iValue);
 
-    iRet = FactDiff(iValue);
-    
-    printf("%d",iRet);
-
-    return 0;
+  return 0;
 }

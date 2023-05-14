@@ -1,15 +1,26 @@
-//program which accept name from user and print that name
+//program which accept number from user and print that number of $ & *
 #include<stdio.h>
 
+void Pattern(int iNo)
+{
+  int iCnt=0;
 
+  if(iNo<0)
+  {
+    iNo=- iNo;
+  }
+  for(iCnt=1;iCnt<=iNo;iCnt++)
+  {
+    printf(" $ * ");
+  }
+}
 int main()
 {
-  char Name[30];
+  int iValue=0;
 
-  printf("Please enter full name");
-  scanf("%s",& Name);
+  printf("Enter number");
+  scanf("%d",& iValue);
 
-  printf("Your name is %s",Name);
-  
+  Pattern(iValue);
   return 0;
 }

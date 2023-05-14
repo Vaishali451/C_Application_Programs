@@ -1,41 +1,22 @@
-// program which accept one number from user and check wheather that number greater than 100 or not 
+// program which accept number from user and print numbers till that number
 #include<stdio.h>
-typedef int BOOL ;
 
-# define TRUE 1
-# define FALSE 0
 
-BOOL ChkGreater(int iNo)
+void Display(int iNo)
 {
-  if (iNo> 100)
-  {
-    return TRUE;
-  }
-  else
-  {
-    return FALSE;
-  }
- 
+ int iCnt=0;
+ for(iCnt=1 ; iCnt<=iNo ; iCnt++)
+ {
+  printf("%d \t \t ",iCnt);
+ }
 }
 int main()
 {
   int iValue=0;
 
-  BOOL bRet = FALSE;
-
-  printf("Please Enter number");
+  printf("Enter number");
   scanf("%d",& iValue);
 
-  bRet=ChkGreater(iValue);
-
-  if(iValue> 100)
-  {
-    printf("Greater");
-  }
-  else
-  {
-    printf("Smaller");
-  }
-
+  Display(iValue);
   return 0;
 }
