@@ -1,28 +1,32 @@
+// program which accept number from user and return summation of all its non factors
 #include<stdio.h>
 
-void Display( int iNo,int iFrequency)
+
+int SumNonFact(int iNo)
 {
-   iNo=0;
- 
-  for(iNo= 0 ; iFrequency > iNo; iNo++)
-  {
-    printf("%d", iNo);
-    
-  }
+ int iCnt = 0;
+ int iSum = 0;
+  for(iCnt = 1; iCnt <= iNo ; iCnt++)      
+    {
+        if((iNo % iCnt) != 0)
+        {
+          iSum = iSum + iCnt;
+        }
+    }
+ return iSum;
 }
 
 int main()
 {
-  int iValue=0;
-  int iCount=0;
+    int iValue=0;
+    int iRet = 0;
 
-  printf("Enter number");
-  scanf("%d",&iValue);
+    printf("Enter number");
+    scanf("%d",& iValue);
 
-  printf("Enter frequency");
-  scanf("%d",&iCount);
+    iRet = SumNonFact(iValue);
+    
+    printf("%d",iRet);
 
-  Display(iValue,iCount);
-
-  return 0;
+    return 0;
 }

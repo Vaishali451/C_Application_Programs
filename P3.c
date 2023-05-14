@@ -1,17 +1,18 @@
+// program which accept number from user and display all its non factors
 #include<stdio.h>
 
-void Display(int iNo)
+void NonFact(int iNo)
 {
-  if(iNo<10)
-  {
-    printf("Hello");
-  }
-  else
-  {
-    printf("Demo");
-  }
+  int iCnt = 0;
+  for(iCnt = 1; iCnt <= iNo ; iCnt++)      
+    {
+        if((iNo % iCnt) != 0)
+        {
+            printf("%d \t",iCnt);
+        }
+    }
+    
 }
-
 int main()
 {
     int iValue=0;
@@ -19,7 +20,7 @@ int main()
     printf("Enter number");
     scanf("%d",& iValue);
 
-    Display(iValue);
+   NonFact(iValue);
 
     return 0;
 }
