@@ -1,0 +1,54 @@
+//Accept Number of rows and columns From user and Display Below Pattern 
+/*
+  Input:
+  iRow = 5
+  iCol = 5
+
+  
+*/
+#include<stdio.h>
+
+void Pattern(int iRow, int iCol)
+{
+    int i = 0, j = 0;
+    char ch ='\0';
+
+     if(iRow != iCol)
+     {
+        printf("Invalid Input\n");
+        return;
+     }
+      
+    //    1       2        3
+    for(i = 1; i<= iRow; i++)   // Outer
+    {   //    1         2       3 
+        for(j = 1 ,ch='a'; j <= iCol; j++ , ch ++)  // Inner
+        {
+            if ((i%2==0))
+            {
+                printf("%c\t",ch);
+            }
+            else 
+            {
+                printf("%d\t",j);
+            }
+            
+            
+        }
+        printf("\n");
+        
+    }
+
+
+}
+int main()
+{
+    int iValue1 = 0, iValue2 = 0;
+
+    printf("Enter number of rows and Columns \n");
+    scanf("%d %d ",&iValue1,& iValue2);
+
+    Pattern(iValue1, iValue2);
+
+    return 0;
+}
