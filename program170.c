@@ -1,7 +1,5 @@
 // Accept the charachter from user and check that character present in string or not
 #include<stdio.h>
-#include<stdlib.h>
-
 
 
 int CountChar(char *str , char cValue)

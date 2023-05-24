@@ -1,4 +1,4 @@
-// Accept the charachter from user and check that character present in string or not
+// Accept the charachter from user and check that character how many times present in string or not
 #include<stdio.h>
 
 
